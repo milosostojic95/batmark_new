@@ -1,0 +1,97 @@
+.about-us-hero {
+  height: 70vh;
+  // background-image: url('./imgs/about-hero.jpg');
+  .about-us-wrapper {
+    height: 100%;
+  }
+}
+
+.who-we-are {
+  padding: 120px 60px;
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 24px;
+  }
+  .who-btn {
+    a {
+      color: $white;
+      @include media-breakpoint-up(sm) {
+        width: 180px;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 255px;
+      }
+    }
+  }
+}
+
+.our-people {
+  padding: 120px 0;
+  .img-text-left {
+    .employee {
+      position: relative;
+
+      .people-border {
+        position: absolute;
+        top: -8%;
+        left: 50%;
+        transform: translate(-50%, 8%);
+        border: 7px solid $primary;
+        width: 400px;
+        height: 180px;
+        z-index: 100;
+        -webkit-transform: translate(-50%, 8%);
+        -moz-transform: translate(-50%, 8%);
+        -ms-transform: translate(-50%, 8%);
+        -o-transform: translate(-50%, 8%);
+      }
+    }
+    .people-text {
+      padding: 50px 40px 50px 0;
+
+      h2 {
+        color: $primary;
+      }
+      h5 {
+        span {
+          color: $primary;
+        }
+      }
+    }
+  }
+  .img-text-right {
+    .employee {
+      position: relative;
+
+      .people-border {
+        position: absolute;
+        top: -8%;
+        left: 50%;
+        transform: translate(-50%, 8%);
+        border: 7px solid $primary;
+        width: 400px;
+        height: 180px;
+        z-index: 100;
+        -webkit-transform: translate(-50%, 8%);
+        -moz-transform: translate(-50%, 8%);
+        -ms-transform: translate(-50%, 8%);
+        -o-transform: translate(-50%, 8%);
+      }
+    }
+    .people-text {
+      padding: 50px 40px 50px 0;
+
+      h2 {
+        color: $primary;
+      }
+      h5 {
+        span {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

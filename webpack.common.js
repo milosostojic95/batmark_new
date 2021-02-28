@@ -1,6 +1,6 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const webpack = require('webpack');
 module.exports = {
     entry: {
         main: './src/main.js',
@@ -19,7 +19,18 @@ module.exports = {
         filename: 'services.html',
         template:'./src/services.html',
     }),
-        new MiniCssExtractPlugin({filename: '[name].[contenthash].css'})
+      new HtmlWebpackPlugin({
+        filename: 'service-one.html',
+        template:'./src/service-one.html',
+    }),
+        new MiniCssExtractPlugin({filename: '[name].[contenthash].css'}),
+        new webpack.ProvidePlugin({
+          '$': "jquery",
+          'jQuery': "jquery",
+          'window.jQuery': 'jquery',
+          'Popper': 'popper.js',
+          "Bootstrap": "bootstrap.js"
+      })
     ],
     module: {
         rules: [
